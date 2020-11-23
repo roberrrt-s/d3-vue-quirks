@@ -111,13 +111,12 @@
 				.merge(u) // get the already existing elements as well
 				.transition() // and apply changes to all of them
 				.duration(1000)
-					.attr("x", (d) => { return this.x(d.name); })
-					.attr("y", (d) => { return this.y(d.sales); })
-					.attr("width", this.x.bandwidth())
-					.attr("height", (d) => {
-						console.log(d)
-						return this.height - this.y(d.sales);
-					})
+				.attr("x", (d) => { return this.x(d.name); })
+				.attr("y", (d) => { return this.y(d.sales); })
+				.attr("width", this.x.bandwidth())
+				.attr("height", (d) => {
+					return this.height - this.y(d.sales);
+				})
 
 			// If less group in the new dataset, I delete the ones not in use anymore
 			u
