@@ -1,5 +1,6 @@
 <template>
 	<button v-on:click="updateData">Click me!</button>
+	<br />
 	<Chart :chartData="chartData" />
 </template>
 
